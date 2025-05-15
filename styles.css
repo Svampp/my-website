@@ -357,7 +357,7 @@ body {
     font-size: 14px;
 }
 
-/* Портфолио */
+/* Фильтр портфолио */
 .portfolio-filter {
     display: flex;
     justify-content: center;
@@ -366,6 +366,19 @@ body {
     flex-wrap: wrap;
 }
 
+.portfolio-filter .pixel-button {
+    margin: 5px;
+}
+
+.portfolio-filter .pixel-button.active {
+    background-color: var(--accent);
+}
+
+.portfolio-filter .pixel-button.active::before {
+    border-color: var(--accent);
+}
+
+/* Сетка портфолио */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
