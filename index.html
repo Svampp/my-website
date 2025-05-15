@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иван Петров | Игровой программист</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Анимация пиксельного дождя (код в JS части) -->
+    <div id="pixel-rain"></div>
+    
+    <!-- Главное меню -->
+    <nav class="pixel-nav">
+        <ul>
+            <li><a href="#about" class="pixel-button">Обо мне</a></li>
+            <li><a href="#skills" class="pixel-button">Навыки</a></li>
+            <li><a href="#portfolio" class="pixel-button">Портфолио</a></li>
+            <li><a href="#experience" class="pixel-button">Опыт</a></li>
+            <li><a href="#contact" class="pixel-button">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Герой-секция -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="pixel-text">Иван Петров</h1>
+            <h2 class="pixel-text">Игровой программист</h2>
+            <div class="console-container">
+                <span id="console-text"></span>
+                <div class="console-underscore" id="console-underscore">_</div>
+            </div>
+            <a href="#contact" class="pixel-button cta-button">Связаться со мной</a>
+        </div>
+        <div class="hero-avatar">
+            <div class="pixel-avatar"></div>
+            <div class="health-bar">
+                <div class="health-fill" style="width: 100%;"></div>
+            </div>
+            <span class="level-text">Уровень: <span class="level-number">42</span></span>
+        </div>
+    </header>
+
+    <!-- Обо мне -->
+    <section id="about" class="section pixel-section">
+        <h2 class="section-title pixel-border">Обо мне</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Привет! Я игровой программист с 5+ годами опыта в разработке игр для PC, мобильных устройств и VR.</p>
+                <p>Специализируюсь на Unity и Unreal Engine, но также работаю с собственными движками. Люблю создавать интерактивные миры и сложные игровые механики.</p>
+                <p>В свободное время участвую в game jams, изучаю новые технологии и, конечно же, играю в игры!</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-bar" data-level="95"></div>
+                    <span>C++/C#</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-bar" data-level="90"></div>
+                    <span>Unity/Unreal</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-bar" data-level="85"></div>
+                    <span>Оптимизация</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-bar" data-level="80"></div>
+                    <span>ИИ в играх</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="section pixel-section">
+        <h2 class="section-title pixel-border">Мои навыки</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-skill="unity">
+                <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>Unity Development</h3>
+                <p>Полный цикл разработки игр на Unity, включая VR/AR проекты.</p>
+                <div class="skill-level">Эксперт</div>
+            </div>
+            <div class="skill-card" data-skill="unreal">
+                <div class="skill-icon"><i class="fas fa-ghost"></i></div>
+                <h3>Unreal Engine</h3>
+                <p>Разработка AAA-качества игр с использованием Blueprints и C++.</p>
+                <div class="skill-level">Продвинутый</div>
+            </div>
+            <div class="skill-card" data-skill="ai">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <h3>Игровой ИИ</h3>
+                <p>Создание сложных поведенческих систем, pathfinding, конечные автоматы.</p>
+                <div class="skill-level">Продвинутый</div>
+            </div>
+            <div class="skill-card" data-skill="shaders">
+                <div class="skill-icon"><i class="fas fa-magic"></i></div>
+                <h3>Шейдеры & VFX</h3>
+                <p>Написание шейдеров на HLSL/GLSL, создание визуальных эффектов.</p>
+                <div class="skill-level">Средний</div>
+            </div>
+            <div class="skill-card" data-skill="multiplayer">
+                <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Мультиплеер</h3>
+                <p>Разработка сетевого кода, синхронизация, серверная архитектура.</p>
+                <div class="skill-level">Средний</div>
+            </div>
+            <div class="skill-card" data-skill="tools">
+                <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                <h3>Инструменты</h3>
+                <p>Создание редакторов и инструментов для геймдизайнеров и художников.</p>
+                <div class="skill-level">Эксперт</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="section pixel-section">
+        <h2 class="section-title pixel-border">Портфолио</h2>
+        <div class="portfolio-filter">
+            <button class="pixel-button active" data-filter="all">Все</button>
+            <button class="pixel-button" data-filter="unity">Unity</button>
+            <button class="pixel-button" data-filter="unreal">Unreal</button>
+            <button class="pixel-button" data-filter="mobile">Мобильные</button>
+            <button class="pixel-button" data-filter="vr">VR</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="unity vr">
+                <div class="portfolio-image" style="background-image: url('placeholder-vr-game.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>VR Adventure</h3>
+                        <p>Полноценное VR-приключение с физическим взаимодействием</p>
+                        <a href="#" class="pixel-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="unreal">
+                <div class="portfolio-image" style="background-image: url('placeholder-fps-game.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>FPS Prototype</h3>
+                        <p>Высокопроизводительный шутер с продвинутым ИИ</p>
+                        <a href="#" class="pixel-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="unity mobile">
+                <div class="portfolio-image" style="background-image: url('placeholder-mobile-game.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>Hyper Casual</h3>
+                        <p>Мобильная игра с 1M+ загрузок</p>
+                        <a href="#" class="pixel-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="unreal">
+                <div class="portfolio-image" style="background-image: url('placeholder-openworld.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>Open World Tech</h3>
+                        <p>Система потоковой загрузки мира</p>
+                        <a href="#" class="pixel-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="unity">
+                <div class="portfolio-image" style="background-image: url('placeholder-indie-game.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>Indie Puzzle Game</h3>
+                        <p>Уникальная механика с физикой</p>
+                        <a href="#" class="pixel-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="tools">
+                <div class="portfolio-image" style="background-image: url('placeholder-editor-tool.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>Level Editor Tool</h3>
+                        <p>Кастомизированный редактор уровней</p>
+                        <a href="#" class="pixel-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Опыт работы -->
+    <section id="experience" class="section pixel-section">
+        <h2 class="section-title pixel-border">Опыт работы</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2021 - Настоящее время</div>
+                <div class="timeline-content pixel-border">
+                    <h3>Senior Game Programmer</h3>
+                    <h4>Stellar Games Studio</h4>
+                    <p>Разработка core-механик для AAA-проекта, оптимизация производительности, руководство младшими программистами.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2018 - 2021</div>
+                <div class="timeline-content pixel-border">
+                    <h3>Gameplay Programmer</h3>
+                    <h4>Neon Interactive</h4>
+                    <p>Реализация игровых механик, работа с ИИ, интеграция анимаций.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2016 - 2018</div>
+                <div class="timeline-content pixel-border">
+                    <h3>Junior Game Developer</h3>
+                    <h4>Pixel Forge</h4>
+                    <p>Разработка мобильных игр, создание инструментов, исправление багов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section pixel-section">
+        <h2 class="section-title pixel-border">Контакты</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Давайте работать вместе!</h3>
+                <p>Я всегда открыт для обсуждения новых проектов и возможностей сотрудничества.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ivan.petrov@gamedev.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (123) 456-78-90</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/ivan-game-dev</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/ivan-game-dev</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form pixel-border">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Ваш email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Тема">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Ваше сообщение" required></textarea>
+                </div>
+                <button type="submit" class="pixel-button">Отправить сообщение</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="pixel-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="pixel-text">Иван Петров</span>
+                <span>Игровой программист</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-itch-io"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2023 Все права защищены. Сделано с <i class="fas fa-heart"></i> и <i class="fas fa-coffee"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
